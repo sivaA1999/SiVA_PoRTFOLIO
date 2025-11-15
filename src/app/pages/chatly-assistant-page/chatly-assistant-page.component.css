@@ -1,0 +1,93 @@
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 16px;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.login-card {
+  background-color: #fff;
+  padding: 3rem 2rem;
+  max-width: 480px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  animation: fadeInUp 0.5s ease;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.brand {
+  color: #4a90e2;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.linkedin-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #0077b5;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.linkedin-btn:hover {
+  background-color: #005983;
+}
+
+.linkedin-icon {
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* If you want to style the snackbar container, 
+  you need to put this in a global style file (like styles.css) 
+  because the snackbar is rendered outside the component's view. 
+*/
+
+/* Example styles for the snackbar-info class */
+.snackbar-info.mat-mdc-snack-bar-container {
+  background-color: #2196F3 !important; /* Blue background */
+  color: white !important; /* White text */
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.snackbar-info .mat-mdc-button.mat-mdc-snack-bar-action {
+  color: #c5e1a5 !important; /* Lighter action button color */
+  font-weight: bold;
+}

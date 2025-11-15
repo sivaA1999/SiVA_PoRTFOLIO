@@ -1,1 +1,59 @@
-<p>resume-page works!</p>
+<div class="resume-block">
+  <h3>Resume</h3>
+  <div class="experience-card">
+    <h3>Work Experience</h3>
+  <div *ngFor="let work of workExperiences">
+    <div class="card-header">
+      <img
+  [src]="'assets/company-logo/' + work.logoFilename"
+  (error)="onImageError($event)"
+  [alt]="work.company"
+  class="company-logo"
+/>
+      <div>
+        <h4>{{ work.jobTitle }}</h4>
+        <p class="company-location">
+          {{ work.company }} · {{ work.location }}
+        </p>
+        <p class="date-range">{{ work.dateRange }}</p>
+      </div>
+    </div>
+    <ul class="skill-list">
+      <li *ngFor="let skill of work.skills">{{ skill }}</li>
+    </ul>
+  </div>
+  </div>
+</div>
+
+<div class="resume-block" class="experience-card">
+  <h3>Education</h3>
+  <div class="education-card">
+    <img src="assets/university-logo/sse.jpg" alt="Sanskriti School" class="edu-logo" />
+    <div>
+      <h4>Sanskriti School of Engineering</h4>
+      <p>B.Tech, Computer Science · 2018 - 2022</p>
+      <p>Grade: 8.0 CGPA</p>
+    </div>
+  </div>
+</div>
+
+<div class="resume-block" class="experience-card">
+  <h3>Skills & Expertise</h3>
+  <div class="skill-category">
+    <p class="category-label">Languages</p>
+    <ul class="skill-list">
+      <li>Java</li>
+      <li>TypeScript</li>
+      <li>Python</li>
+    </ul>
+  </div>
+
+  <div class="skill-category">
+    <p class="category-label">Frameworks</p>
+    <ul class="skill-list">
+      <li>Angular</li>
+      <li>FastAPI</li>
+      <li>Spring Boot</li>
+    </ul>
+  </div>
+</div>

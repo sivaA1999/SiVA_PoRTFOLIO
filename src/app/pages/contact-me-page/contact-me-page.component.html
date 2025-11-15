@@ -1,1 +1,57 @@
-<p>contact-me-page works!</p>
+<div class="contact-card">
+<section class="contact-section">
+  <div class="contact-left">
+    <h2>Contact</h2>
+    <p>Looking forward to hearing from you</p>
+    <div class="contact-info">
+      <h4>Phone</h4>
+      <p>+91-7330691041</p>
+      <h4>Email</h4>
+      <!-- Note: Changed to contactEmail as contactEmail1 was not defined in the TS -->
+      <p>{{ contactEmail }}</p> 
+    </div>
+  </div>
+
+  <form
+    [formGroup]="contactForm"
+    (ngSubmit)="onSubmit()"
+    class="contact-form"
+    action="https://formspree.io/f/mvgdqola"
+    method="POST"
+  >
+    <div class="row">
+      <!-- NOTE: Formspree keys are derived from formControlName/name attributes -->
+      <input type="text" formControlName="firstName" name="firstName" placeholder="First Name *" required />
+      <input type="text" formControlName="lastName" name="lastName" placeholder="Last Name *" required />
+    </div>
+
+    <div class="row">
+      <input type="email" formControlName="email" name="email" placeholder="Email *" required />
+      <input type="text" formControlName="subject" name="subject" placeholder="Subject" />
+    </div>
+
+    <textarea formControlName="message" name="message" rows="5" placeholder="Message" required></textarea>
+
+    <!-- Updated button state to also disable during submission -->
+    <button type="submit" [disabled]="!contactForm.valid || isSubmitting">
+      {{ isSubmitting ? 'Sending...' : 'Submit' }}
+    </button>
+  </form>
+</section>
+
+<!-- Display messages -->
+<div *ngIf="successMessage" class="success-message">
+  {{ successMessage }}
+</div>
+
+<div *ngIf="errorMessage" class="error-message">
+  {{ errorMessage }}
+</div>
+</div>
+
+<!-- 
+     REMOVED: data-netlify, name, method, hidden inputs for netlify 
+     Formspree requires you to add your unique endpoint here if you don't use fetch/XHR. 
+    Since we are using fetch in the TS, this is just a placeholder/fallback.  -->
+
+

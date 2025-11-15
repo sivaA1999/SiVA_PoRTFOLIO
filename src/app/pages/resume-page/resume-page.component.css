@@ -1,0 +1,80 @@
+.experience-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.company-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-right: 12px;
+  border-radius: 4px;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+
+.company-location {
+  font-weight: 500;
+  color: #333;
+}
+
+.date-range {
+  color: gray;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+
+.education-card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.edu-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+
+.skill-category {
+  margin-bottom: 16px;
+}
+
+.category-label {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;           /* Wrap items to next line if needed */
+  gap: 10px;                 /* Space between each skill tag */
+  list-style: none;         /* Remove bullets */
+  padding: 0;
+  margin-top: 8px;
+}
+
+.skill-list li {
+  background: #eef3f9;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  white-space: nowrap;       /* Prevent long skills from wrapping */
+}
+
+.skill-list li:hover {
+  background-color: #d0e7ff;
+  cursor: default;
+}
