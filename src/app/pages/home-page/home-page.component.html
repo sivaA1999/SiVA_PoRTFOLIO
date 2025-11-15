@@ -1,0 +1,47 @@
+<nav class="main-nav">
+  <div class="nav-container">
+     <div class="nav-logo">
+      <!-- <a routerLink="/">Siva Gangadhar</a> -->
+</div>
+
+    <div class="hamburger" [class.open]="menuOpen" (click)="toggleMenu()">
+    <!-- <div class="hamburger" (click)="toggleMenu()"> -->
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" [class.active]="menuOpen">
+      <li><a routerLink="/resume" (click)="closeMenu()">Resume</a></li>
+      <li><a routerLink="/projects" (click)="closeMenu()">Projects</a></li>
+      <li><a routerLink="/buddy-list" (click)="closeMenu()">Buddies</a></li>
+      <li><a routerLink="/chatly" (click)="closeMenu()">Chatly AI Assistant</a></li>
+      <li><a routerLink="/contact-me" (click)="closeMenu()">Get-In-Touch</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-photo-outer">
+  <div class="hero-photo-border"></div>
+  <div class="hero-photo-inner">
+    <img src="assets/friend-photo/siva.jpeg" alt="Siva Gangadhar" />
+  </div>
+</div>
+
+    <h1>Hi, I'm <span class="highlight">Siva Gangadhar</span></h1>
+    <h2>Full Stack Developer | GenAI Enthusiast</h2>
+    
+    <p>
+      I specialize in building scalable web applications using Angular, Spring Boot, Java, and AWS. Passionate about solving real-world problems with clean code and innovative design.
+    </p>
+
+    <div class="hero-buttons">
+      <a routerLink="/resume" class="hero-btn">Resume</a>
+      <a routerLink="/projects" class="hero-btn">Projects</a>
+      <a routerLink="/buddy-list" class="hero-btn">Buddies</a>
+      <a routerLink="/chatly" class="hero-btn">Chatly AI Assistant</a>
+      <a routerLink="/contact-me" class="hero-btn">Get-In-Touch</a>
+    </div>
+  </div>
+</section>
